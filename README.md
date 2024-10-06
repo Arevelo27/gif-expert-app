@@ -13,6 +13,10 @@ Currently, two official plugins are available:
 
 ## Deploys
 
-- **Netlify** [sites pages](https://app.netlify.com/sites/page-gif-expert-app/overview)
+- **Netlify**
+  - **Sites page** [URL](https://app.netlify.com/sites/page-gif-expert-app/overview)
+  - **gif-expert-app** [page App](https://page-gif-expert-app.netlify.app/)
 
-- **gif-expert-app** [page](https://page-gif-expert-app.netlify.app/)
+- Github Page
+  - **Site** [URL](https://github.com/Arevelo27/gif-expert-app)
+  - **gif-expert-app** [page App](https://arevelo27.github.io/gif-expert-app/)
