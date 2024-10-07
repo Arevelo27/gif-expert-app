@@ -2,8 +2,11 @@
 
 exports[`Prueba en <GifGrid/> debe hacer match con el snapshot 1`] = `
 <div>
-  <h2>
-    Cargando...
-  </h2>
+  <h3>
+    One Punch
+  </h3>
+  <div
+    class="card-grid"
+  />
 </div>
 `;
