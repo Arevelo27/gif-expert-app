@@ -10,7 +10,10 @@ describe('Prueba en <GifGrid/>', () => {
 
     test('debe hacer match con el snapshot', () => {
 
-        useFetchGifs.mockReturnValue([[], false]); // Devuelve un array
+        useFetchGifs.mockReturnValue({
+            images: [],
+            isLoading: false
+        });
 
         const { container } = render(<GifGrid category={category} />);
         expect(container).toMatchSnapshot();
@@ -19,7 +22,10 @@ describe('Prueba en <GifGrid/>', () => {
 
     test('debe de mostrar el loading inicialmente', () => {
 
-        useFetchGifs.mockReturnValue([[], true]); // Devuelve un array
+        useFetchGifs.mockReturnValue({
+            images: [],
+            isLoading: true
+        });
 
         render(<GifGrid category={category} />);
         expect(screen.getByText('Cargando...')).toBeTruthy();
@@ -33,7 +39,10 @@ describe('Prueba en <GifGrid/>', () => {
             { id: '2', title: 'Gif 2', url: 'https://example.com/gif2.gif' }
         ];
 
-        useFetchGifs.mockReturnValue([gifs, false]); // Devuelve un array
+        useFetchGifs.mockReturnValue({
+            images: gifs,
+            isLoading: false
+        });
         render(<GifGrid category={category} />);
         expect(screen.getByText(category)).toBeTruthy();
         expect(screen.getAllByRole('img').length).toBe(gifs.length);
